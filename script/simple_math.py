@@ -1,6 +1,8 @@
 import argparse
 from eth_abi import encode_single
 
+# 
+
 def main(args):
     if (args.action == 'increment'): 
         increment(args.number)
@@ -10,7 +12,9 @@ def main(args):
     exit(1)
 
 def increment(number):
-    append_to_file(number)
+    # uncomment the line below to write debugging
+    # info to "input_from_forge_test" file
+    # append_to_file(number)
     enc = encode_single('uint256', int(number+1))
     ## append 0x for FFI parsing 
     print("0x" + enc.hex())
