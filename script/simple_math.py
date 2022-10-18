@@ -1,5 +1,5 @@
 import argparse
-
+from eth_abi import encode_single
 
 def main(args):
     if (args.action == 'increment'): 
@@ -10,7 +10,15 @@ def main(args):
     exit(1)
 
 def increment(number):
-    print(number + 1)
+    append_to_file(number)
+    enc = encode_single('uint256', int(number+1))
+    ## append 0x for FFI parsing 
+    print("0x" + enc.hex())
+
+def append_to_file(what):
+    file_object = open('input_from_forge_test.txt', 'a')
+    file_object.write(str(what) + "\n")
+    file_object.close()
 
 def parse_args(): 
     parser = argparse.ArgumentParser()

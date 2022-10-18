@@ -9,3 +9,5 @@ out/
 
 # Dotenv file
 .env
+
+input_from_forge_test.txt
