@@ -1,4 +1,12 @@
-# Installation
+# Foundry differential testing and FFI demo code
+
+ * https://book.getfoundry.sh/forge/differential-ffi-testing
+ * https://book.getfoundry.sh/reference/config/testing#ffi
+ * https://book.getfoundry.sh/cheatcodes/ffi
+
+
+
+## Installation
 
 Install python script dependencies:
 
